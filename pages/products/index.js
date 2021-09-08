@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import { useState, useEffect } from 'react';
 import * as Realm from 'realm-web';
-import Header from '../components/Header';
-import Container from '../components/Container';
-import Hero from '../components/Hero';
-import Category from '../components/Category';
-import Products from '../components/Products';
-import Pagination from '../components/Pagination';
-import Footer from '../components/Footer';
+import Header from '../../components/Header';
+import Container from '../../components/Container';
+import Category from '../../components/Category';
+import Products from '../../components/Products';
+import Pagination from '../../components/Pagination';
+import Footer from '../../components/Footer';
 
 export default function Home() {
   const[products, setProducts] = useState([]);
@@ -32,8 +31,7 @@ export default function Home() {
       <div className="bg-white w-full min-h-screen">
         <Header />
         <Container>
-          <Hero />
-          <Category category="Tech Wear" categoryCount={`${products.length} Products`} />
+          <Category category="All Products" categoryCount={`${products.length} Products`} />
           <Products products={products} />
           <Pagination />
         </Container>
